@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import Stack from './navigation/Stack';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function App() {
+export default () => {
   return (
-    <View style={styles.container}>
-      <Text>Editais IFRN</Text>
-      <StatusBar style="auto" />
+    <View>
+      <NavigationContainer>
+        <Stack />
+      </NavigationContainer>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
