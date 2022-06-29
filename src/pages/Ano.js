@@ -37,25 +37,25 @@ const style = StyleSheet.create({
         textAlign: 'center',
         padding: 20,
         borderRadius: 30,
-        backgroundColor: 'DarkCyan'
+        backgroundColor: '#1A8FDD'
     },
     btn2: {
         textAlign: 'center',
         padding: 20,
         borderRadius: 30,
-        backgroundColor: 'DarkCyan'
+        backgroundColor: '#1A8FDD'
     },
     btn3: {
         textAlign: 'center',
         padding: 20,
         borderRadius: 30,
-        backgroundColor: 'DarkCyan'
+        backgroundColor: '#1A8FDD'
     },
     btn4: {
         textAlign: 'center',
         padding: 20,
         borderRadius: 30,
-        backgroundColor: 'DarkCyan'
+        backgroundColor: '#1A8FDD'
     }
 })
 
