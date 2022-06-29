@@ -4,10 +4,6 @@ import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 export default props => {
     return (
         <View style={style.campus}>
-            <View style={style.header}>
-                <Text>Editais IFRN /
-                    Campus / Ano / Edital</Text>
-            </View>
             <TouchableOpacity style={style.btn} onPress={() => { props.navigation.navigate("Edital") }}>
                 <View>
                     <Text>Edital Nº XX/XXXX</Text>
