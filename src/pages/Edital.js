@@ -40,6 +40,7 @@ const style = StyleSheet.create({
         backgroundColor: '#4AF56F'
     },
     btn1: {
+        marginTop: 40,
         marginBottom: 20,
         textAlign: 'center',
         padding: 15,
