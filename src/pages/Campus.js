@@ -34,24 +34,28 @@ const style = StyleSheet.create({
         flex: 1,
     },
     btn1: {
+        marginBottom: 20,
         textAlign: 'center',
         padding: 20,
         borderRadius: 30,
         backgroundColor: '#1A8FDD'
     },
     btn2: {
+        marginBottom: 20,
         textAlign: 'center',
         padding: 20,
         borderRadius: 30,
         backgroundColor: '#1A8FDD'
     },
     btn3: {
+        marginBottom: 20,
         textAlign: 'center',
         padding: 20,
         borderRadius: 30,
         backgroundColor: '#1A8FDD'
     },
     btn4: {
+        marginBottom: 20,
         textAlign: 'center',
         padding: 20,
         borderRadius: 30,
