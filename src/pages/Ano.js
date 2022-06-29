@@ -34,6 +34,7 @@ const style = StyleSheet.create({
         flex: 1,
     },
     btn1: {
+        marginTop: 40,
         marginBottom: 20,
         textAlign: 'center',
         padding: 15,
