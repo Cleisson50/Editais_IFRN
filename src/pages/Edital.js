@@ -1,63 +1,88 @@
-import * as React from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
+import React, { Component } from "react";
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from "react-native";
+import { ListItem, SearchBar } from "react-native-elements";
+import filter from "lodash.filter";
 
-export default props => {
+const Edital = [
+  {
+    id: "1",
+    title: "Edital Nº 11/1111",
+  },
+  {
+    id: "2",
+    title: "Edital Nº 22/2222",
+  },
+  {
+    id: "3",
+    title: "Edital Nº 33/3333",
+  },
+  {
+    id: "4",
+    title: "Edital Nº 44/4444",
+  },
+ 
+];
+  
+const Item = ({ title }) => {
+  return (
+    <View >
+      <TouchableOpacity style={style.btn}>{title}</TouchableOpacity>
+    </View>
+  );
+};
+  
+const renderItem = ({ item }) => <Item title={item.title} />;
+class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false,
+      data: Edital,
+      error: null,
+      searchValue: "",
+    };
+    this.arrayholder = Edital;
+  }
+  
+  searchFunction = (text) => {
+    const updatedData = this.arrayholder.filter((item) => {
+      const item_data = `${item.title.toUpperCase()})`;
+      const text_data = text.toUpperCase();
+      return item_data.indexOf(text_data) > -1;
+    });
+    this.setState({ data: updatedData, searchValue: text });
+  };
+  
+  render() {
     return (
-        <View style={style.campus}>
-            <TouchableOpacity style={style.btn1} onPress={() => { props.navigation.navigate("Edital") }}>
-                <View>
-                    <Text>Edital Nº XX/XXXX</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn2} onPress={() => { props.navigation.navigate("Edital") }}>
-                <View>
-                    <Text>Edital Nº XX/XXXX</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn3} onPress={() => { props.navigation.navigate("Edital") }}>
-                <View>
-                    <Text>Edital Nº XX/XXXX</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn4} onPress={() => { props.navigation.navigate("Edital") }}>
-                <View>
-                    <Text>Edital Nº XX/XXXX</Text>
-                </View>
-            </TouchableOpacity>
-
-        </View>
-    )
+      <View style={style.campus}>
+        <SearchBar
+          placeholder="Pesquise"
+          lightTheme
+          round
+          value={this.state.searchValue}
+          onChangeText={(text) => this.searchFunction(text)}
+          autoCorrect={false}
+        />
+        <FlatList
+          data={this.state.data}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
+    );
+  }
 }
 
+  
+export default Search;
 const style = StyleSheet.create({
     campus: {
-        backgroundColor: '#8FBC8F',
+      backgroundColor: '#8FBC8F',
         flex: 1,
     },
-    btn1: {
-        marginTop: 40,
-        marginBottom: 20,
-        textAlign: 'center',
-        padding: 15,
-        borderRadius: 30,
-        backgroundColor: '#008B8B'
-    },
-    btn2: {
-        marginBottom: 20,
-        textAlign: 'center',
-        padding: 15,
-        borderRadius: 30,
-        backgroundColor: '#008B8B'
-    },
-    btn3: {
-        marginBottom: 20,
-        textAlign: 'center',
-        padding: 15,
-        borderRadius: 30,
-        backgroundColor: '#008B8B'
-    },
-    btn4: {
-        marginBottom: 20,
+    btn: {
+        margin: 10,
         textAlign: 'center',
         padding: 15,
         borderRadius: 30,
