@@ -12,28 +12,28 @@ export default ()  => {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Index" screenOptions={{headerShown: true}}>
       <Stack.Screen name="Index" component={Index} options={{title:"Editais IFRN", headerStyle: {
-            backgroundColor: '#4AF56F',
+            backgroundColor: '#2E8B57',
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',
           headerTitleStyle: {
             fontWeight: 'bold',},}}/>
       <Stack.Screen name="Campus" component={Campus} options={{title:"Editais IFRN/ Campus", headerStyle: {
-            backgroundColor: '#4AF56F',
+            backgroundColor: '#2E8B57',
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',
           headerTitleStyle: {
             fontWeight: 'bold',},}} />
       <Stack.Screen name="Ano" component={Ano} options={{title:"Editais IFRN/ Campus/ Ano", headerStyle: {
-            backgroundColor: '#4AF56F',
+            backgroundColor: '#2E8B57',
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',
           headerTitleStyle: {
             fontWeight: 'bold',},}}/>
       <Stack.Screen name="Edital" component={Edital} options={{title:"Editais IFRN/ Campus/ Ano/ Edital", headerStyle: {
-            backgroundColor: '#4AF56F',
+            backgroundColor: '#2E8B57',
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',

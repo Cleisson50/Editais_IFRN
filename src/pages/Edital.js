@@ -31,13 +31,8 @@ export default props => {
 
 const style = StyleSheet.create({
     campus: {
+        backgroundColor: '#8FBC8F',
         flex: 1,
-    },
-    header: {
-        marginBottom: 20,
-        textAlign: 'center',
-        padding: 30,
-        backgroundColor: '#4AF56F'
     },
     btn1: {
         marginTop: 40,
@@ -45,28 +40,28 @@ const style = StyleSheet.create({
         textAlign: 'center',
         padding: 15,
         borderRadius: 30,
-        backgroundColor: '#1A8FDD'
+        backgroundColor: '#008B8B'
     },
     btn2: {
         marginBottom: 20,
         textAlign: 'center',
         padding: 15,
         borderRadius: 30,
-        backgroundColor: '#1A8FDD'
+        backgroundColor: '#008B8B'
     },
     btn3: {
         marginBottom: 20,
         textAlign: 'center',
         padding: 15,
         borderRadius: 30,
-        backgroundColor: '#1A8FDD'
+        backgroundColor: '#008B8B'
     },
     btn4: {
         marginBottom: 20,
         textAlign: 'center',
         padding: 15,
         borderRadius: 30,
-        backgroundColor: '#1A8FDD'
+        backgroundColor: '#008B8B'
     }
 })
 
