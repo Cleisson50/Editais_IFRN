@@ -4,22 +4,22 @@ import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 export default props => {
     return (
         <View style={style.campus}>
-            <TouchableOpacity style={style.btn1} onPress={() => { props.navigation.navigate("Ano") }}>
+            <TouchableOpacity style={style.btn1} onPress={() => { props.navigation.navigate("Ano") }} testID="bnt1">
                 <View>
                     <Text>Campus Apodi</Text>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity style={style.btn2} onPress={() => { props.navigation.navigate("Ano") }}>
+            <TouchableOpacity style={style.btn2} onPress={() => { props.navigation.navigate("Ano") }} testID="bnt2">
                 <View>
                     <Text>Campus Caicó</Text>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity style={style.btn3} onPress={() => { props.navigation.navigate("Ano") }}>
+            <TouchableOpacity style={style.btn3} onPress={() => { props.navigation.navigate("Ano") }} testID="bnt3">
                 <View>
                     <Text>Campus Canguaretama</Text>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity style={style.btn4} onPress={() => { props.navigation.navigate("Ano") }}>
+            <TouchableOpacity style={style.btn4} onPress={() => { props.navigation.navigate("Ano") }} testID="bnt4">
                 <View>
                     <Text>Campus Lajes</Text>
                 </View>

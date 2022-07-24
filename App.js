@@ -4,42 +4,54 @@ import Campus from "./src/pages/Campus";
 import Index from "./src/pages/Index";
 import Ano from "./src/pages/Ano";
 import Edital from "./src/pages/Edital";
- 
+
 const Stack = createNativeStackNavigator();
- 
-export default ()  => {
-  return(
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Index" screenOptions={{headerShown: true}}>
-      <Stack.Screen name="Index" component={Index} options={{title:"Editais IFRN", headerStyle: {
+
+export default () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Index" screenOptions={{ headerShown: true }}>
+        <Stack.Screen name="Index" component={Index} options={{
+          title: "Editais IFRN", headerStyle: {
             backgroundColor: '#2E8B57',
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',
           headerTitleStyle: {
-            fontWeight: 'bold',},}}/>
-      <Stack.Screen name="Campus" component={Campus} options={{title:"Editais IFRN/ Campus", headerStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+        <Stack.Screen name="Campus" component={Campus} options={{
+          title: "Editais IFRN/ Campus", headerStyle: {
             backgroundColor: '#2E8B57',
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',
           headerTitleStyle: {
-            fontWeight: 'bold',},}} />
-      <Stack.Screen name="Ano" component={Ano} options={{title:"Editais IFRN/ Campus/ Ano", headerStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+        <Stack.Screen name="Ano" component={Ano} options={{
+          title: "Editais IFRN/ Campus/ Ano", headerStyle: {
             backgroundColor: '#2E8B57',
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',
           headerTitleStyle: {
-            fontWeight: 'bold',},}}/>
-      <Stack.Screen name="Edital" component={Edital} options={{title:"Editais IFRN/ Campus/ Ano/ Edital", headerStyle: {
+            fontWeight: 'bold',
+          },
+        }} />
+        <Stack.Screen name="Edital" component={Edital} options={{
+          title: "Editais IFRN/ Campus/ Ano/ Edital", headerStyle: {
             backgroundColor: '#2E8B57',
           },
           headerTintColor: '#fff',
           headerTitleAlign: 'center',
           headerTitleStyle: {
-            fontWeight: 'bold',},}}/>
-    </Stack.Navigator>
-      </NavigationContainer>
+            fontWeight: 'bold',
+          },
+        }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
