@@ -1,29 +1,29 @@
 import * as React from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
+import { Text, View, Pressable, StyleSheet } from 'react-native'
 
 export default props => {
     return (
         <View style={style.campus}>
-            <TouchableOpacity style={style.btn1} onPress={() => { props.navigation.navigate("Edital") }}>
+            <Pressable style={style.btn1} onPress={() => { props.navigation.navigate("Edital") }}>
                 <View>
                     <Text>Edital 2010</Text>
                 </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn2} onPress={() => { props.navigation.navigate("Edital") }}>
+            </Pressable>
+            <Pressable style={style.btn2} onPress={() => { props.navigation.navigate("Edital") }}>
                 <View>
                     <Text>Edital 2011</Text>
                 </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn3} onPress={() => { props.navigation.navigate("Edital") }}>
+            </Pressable>
+            <Pressable style={style.btn3} onPress={() => { props.navigation.navigate("Edital") }}>
                 <View>
                     <Text>Edital 2012</Text>
                 </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn4} onPress={() => { props.navigation.navigate("Edital") }}>
+            </Pressable>
+            <Pressable style={style.btn4} onPress={() => { props.navigation.navigate("Edital") }}>
                 <View>
                     <Text>Edital 2013</Text>
                 </View>
-            </TouchableOpacity>
+            </Pressable>
 
         </View>
     )

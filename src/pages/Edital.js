@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, FlatList, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, FlatList, Pressable } from "react-native";
 import { ListItem, SearchBar } from "react-native-elements";
 import filter from "lodash.filter";
 
@@ -20,17 +20,19 @@ const Edital = [
     id: "4",
     title: "Edital Nº 44/4444",
   },
- 
+
 ];
-  
+
 const Item = ({ title }) => {
   return (
-    <View >
-      <TouchableOpacity style={style.btn}>{title}</TouchableOpacity>
+    <View>
+      <Pressable style={style.btn}>
+        <Text>{title}</Text>
+      </Pressable>
     </View>
   );
 };
-  
+
 const renderItem = ({ item }) => <Item title={item.title} />;
 class Search extends Component {
   constructor(props) {
@@ -43,7 +45,7 @@ class Search extends Component {
     };
     this.arrayholder = Edital;
   }
-  
+
   searchFunction = (text) => {
     const updatedData = this.arrayholder.filter((item) => {
       const item_data = `${item.title.toUpperCase()})`;
@@ -52,7 +54,7 @@ class Search extends Component {
     });
     this.setState({ data: updatedData, searchValue: text });
   };
-  
+
   render() {
     return (
       <View style={style.campus}>
@@ -74,19 +76,19 @@ class Search extends Component {
   }
 }
 
-  
+
 export default Search;
 const style = StyleSheet.create({
-    campus: {
-      backgroundColor: '#8FBC8F',
-        flex: 1,
-    },
-    btn: {
-        margin: 10,
-        textAlign: 'center',
-        padding: 15,
-        borderRadius: 30,
-        backgroundColor: '#008B8B'
-    }
+  campus: {
+    backgroundColor: '#8FBC8F',
+    flex: 1,
+  },
+  btn: {
+    margin: 10,
+    textAlign: 'center',
+    padding: 15,
+    borderRadius: 30,
+    backgroundColor: '#008B8B'
+  }
 })
 

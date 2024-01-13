@@ -1,29 +1,29 @@
 import * as React from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
+import { Text, View, Pressable, StyleSheet } from 'react-native'
 
 export default props => {
     return (
         <View style={style.campus}>
-            <TouchableOpacity style={style.btn1} onPress={() => { props.navigation.navigate("Campus") }} testID="botão1">
+            <Pressable style={style.btn1} onPress={() => { props.navigation.navigate("Campus") }} testID="botão1">
                 <View>
                     <Text>Editais Graduação</Text>
                 </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn2} onPress={() => { props.navigation.navigate("Campus") }} testID="botão2">
+            </Pressable>
+            <Pressable style={style.btn2} onPress={() => { props.navigation.navigate("Campus") }} testID="botão2">
                 <View>
                     <Text>Editais Integrado</Text>
                 </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn3} onPress={() => { props.navigation.navigate("Campus") }} testID="botão3">
+            </Pressable>
+            <Pressable style={style.btn3} onPress={() => { props.navigation.navigate("Campus") }} testID="botão3">
                 <View>
                     <Text>Editais Estágio</Text>
                 </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={style.btn4} onPress={() => { props.navigation.navigate("Campus") }} testID="botão4">
+            </Pressable>
+            <Pressable style={style.btn4} onPress={() => { props.navigation.navigate("Campus") }} testID="botão4">
                 <View>
                     <Text>Editais Tecnico</Text>
                 </View>
-            </TouchableOpacity>
+            </Pressable>
 
         </View>
     )
